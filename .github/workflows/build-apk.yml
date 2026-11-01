@@ -10,7 +10,7 @@ jobs:
       - name: Checkout project
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v5
         with:
           node-version: 22
@@ -22,20 +22,23 @@ jobs:
           java-version: '21'
 
       - name: Install dependencies
+        working-directory: winter_arc_playstore_project
         run: npm install
 
-      - name: Add Android platform
+      - name: Add Android
+        working-directory: winter_arc_playstore_project
         run: npx cap add android
 
       - name: Sync Android
+        working-directory: winter_arc_playstore_project
         run: npx cap sync android
 
       - name: Build APK
-        working-directory: android
+        working-directory: winter_arc_playstore_project/android
         run: chmod +x gradlew && ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: winter-arc-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: winter_arc_playstore_project/android/app/build/outputs/apk/debug/app-debug.apk
