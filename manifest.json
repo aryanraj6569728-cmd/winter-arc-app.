@@ -1,0 +1,9 @@
+{
+  "name": "Winter Arc \u2014 Beast Mode",
+  "short_name": "Winter Arc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d1720",
+  "theme_color": "#0d1720",
+  "description": "58-day strength tracker with exercise instructions"
+}
