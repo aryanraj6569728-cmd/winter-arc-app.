@@ -1,0 +1,16 @@
+BUILD WINTER ARC APK USING YOUR PHONE (CLOUD BUILD)
+
+1. Create/sign in to a GitHub account. If the app owner is under 18, ask a parent/guardian to help manage the account and publishing.
+2. On github.com, create a NEW PRIVATE repository named winter-arc-app.
+3. Open the repository, choose Add file > Upload files.
+4. Upload the CONTENTS of this folder (package.json, capacitor.config.json, www/, assets/, README_PLAY_STORE.txt, BUILD_ON_PHONE.txt, and the hidden .github/ folder). Do not upload the outer winter_arc_playstore_project folder as an extra nesting level.
+5. Commit the upload to the main branch.
+6. Open the repository's Actions tab. Select "Build Winter Arc APK" and press "Run workflow" if it has not started automatically.
+7. Wait for the run to finish successfully. Open that run, scroll to Artifacts, and download "winter-arc-debug-apk".
+8. Extract the downloaded artifact ZIP. It contains app-debug.apk. Tap it to install. Android may ask you to allow installation from your browser or file manager; only enable this for the file you just built, then turn the permission off again.
+
+IMPORTANT:
+- This creates a DEBUG APK for personal testing, not a signed Play Store release.
+- Do not publish this debug APK to Google Play. A release build needs a proper signing key and an Android App Bundle (AAB), plus Play Console checks.
+- Keep your GitHub repository private if you do not want the source code public.
+- GitHub Actions availability/usage limits depend on the account and repository plan.
