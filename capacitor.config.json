@@ -1,0 +1,7 @@
+{
+  "appId": "com.winterarc.strengthtracker",
+  "appName": "Winter Arc",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": { "androidScheme": "https" }
+}
